@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de Gauss-Seidel</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Método de Gauss-Seidel</h1>
+    </header>
+    
+
+        <h2>Introducción</h2>
+        <p class="p1">En álgebra lineal numérica, el método de Gauss-Seidel, también conocido como método de Liebmann o método de desplazamiento sucesivo,<br>
+            es un método iterativo utilizado para resolver un sistema de ecuaciones lineales</p> 
+         <br><p>Lleva el nombre de los matemáticos alemanes Carl Friedrich Gauss y Philipp Ludwig von Seidel, y es similar al método Jacobi. Aunque se puede aplicar a cualquier matriz con elementos distintos de cero en las diagonales, la convergencia solo está garantizada si la matriz es estrictamente dominante en diagonal,[1] o simétrica y definida positiva. Sólo se menciona en una carta privada de Gauss a su alumno Gerling en 1823. [2] Seidel no entregó una publicación antes de 1874.</p>
+        <p>El método de Gauss-Seidel es un algoritmo iterativo utilizado para resolver sistemas de ecuaciones lineales.</p>
+        <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/SilI8bmTCAQ?si=Nm8_Yna3ZtKoJco1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <h3>FORMULA</h3>
+        <pre>
+            <img src="gausito.jpg" alt="Ilustración del Método de Gauss-Seidel">
+        <h3>PASOS PARA RESOLVER</h3>
+            <section>
+                PASOS A SEGUIR
+
+            1- En primer lugar hay que determinar si la convergencia es segura. De inmediato se observa que,
+            <br>en efecto, se trata de un sistema diagonalmente dominante,
+            <br>ya que en la primera fila el primer coeficiente tiene mayor valor absoluto que los demás de la 
+            <br>primera fila:
+            
+            |5|>|2|
+            
+            Igualmente, el segundo coeficiente de la segunda fila también es diagonalmente dominante:
+            
+            |-4|>|1|
+            
+            2- Se despejan la variables X e Y: 
+            
+            X = (1 – 2Y)/5
+            
+            Y = X/4
+            
+            3- Se coloca un valor inicial arbitrario, denominado “semilla”: Xo=1, Yo=2.
+            
+            4-Comienza la iteración: para obtener la primera aproximación X1, Y1 se sustituye la semilla en
+            <br> la primera ecuación del paso 2 y el resultado en la segunda ecuación del paso 2:
+            
+            Puede servirte:   Pendiente de una recta: fórmula y ecuaciones, representación, ejemplos
+            X1 = (1 – 2 Yo)/5 = (1 – 2×2)/5 = -3/5 
+            
+            Y1 = X1 / 4 = (-3/5) / 4 = -3/20 
+            
+            5- Se procede en forma similar para obtener la segunda aproximación de la solución del sistema de ecuaciones:
+            
+            X2 = (1 – 2 Y1)/5 = (1 – 2x(-3/20))/5 = 13/50 
+            
+            Y2 = X2/4 = (13/50)/4 = 13/200
+            
+            6- Tercera iteración:
+            
+            X3 = (1 – 2 Y2)/5 = (1 – 2 (13/200))/5 = 87/500
+            
+            Y3 = X3 / 4 = (87/500)/4 = 87/2000
+            
+            7- Cuarta iteración, como iteración final de este caso ilustrativo:
+            
+            X4 = (1 – 2 Y3)/5 = (1 – 2 (87/2000))/5 = 913/5000
+            
+            Y4 = X4 / 4 = (913/5000)/4 = 913/20000
+            
+            Estos valores coinciden bastante bien con la solución hallada mediante otros métodos de resolución.
+            <br>El lector puede comprobarlo rápidamente con ayuda de algún programa matemático online.
+            </P>
+        
+    </section>
+
+
+
+    <footer>
+        <p>© 2023 Gauss-Seidel Explained  AUTOR CARLOS </p>
+    </footer>
+</body>
+</html>
+
